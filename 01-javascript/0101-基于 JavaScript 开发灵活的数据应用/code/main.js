@@ -21,4 +21,29 @@ const strwithoutUpperCase = str1WithoutMarks.toLocaleLowerCase()
 const strArray = strwithoutUpperCase.split(' ')
 console.log(strArray)
 
-/* prac1: 2.1.2 分割字符串 */
+/* prac1: 4.1.2 数组 */
+// 数组的splice方法：增加、删除、替换
+const array = [ 1, 2, 6, 7 ]
+array.splice(2, 0, 3)
+console.log(array)  // [1, 2, 3, 6, 7]， splice方法（操作位置下标，删除元素个数，插入元素）
+
+// 数组的filter方法：筛选
+const array2 = [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+const evenNumbers = array2.filter(function(x) {
+  return x % 2 == 0
+})
+console.log(evenNumbers)  // [2, 4, 6, 8]
+
+// 数组的map方法：映射
+const array3 = [ 1, 2, 3, 4, 5 ]
+
+const addedArray = array3.map(function(x) {
+  return x + 2
+})
+
+console.log(addedArray) //=> [3,4,5,6,7]
+
+// 数组的reduce方法：累加，聚合
+const array4 = [ 1, 2, 3, 4, 5 ]
+const sum = array4.reduce((x,y) => x+y)
+console.log(sum)  // 15
